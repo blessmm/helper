@@ -1,10 +1,45 @@
-Image Tile Splitter
+# Image Tile Splitter
 
-Splits images horizontally into square tiles based on image height.
-If the last tile is smaller, it gets padded with transparency.
-All tiles accumulate in the output folder across multiple runs.
+Скрипт для разделения изображений на квадратные тайлы по горизонтали.
+Подходит для создания кастомных эмоджи в Telegram.
 
-Usage:
-    python split_image.py image1.png [image2.png] [image3.png] ...
+## Установка
 
-Tiles are saved to a "tiles" folder in the current directory.
+pip install Pillow
+
+
+
+## Использование
+
+Одна картинка:
+
+python split_image.py image.png
+
+Несколько картинок:
+
+python split_image.py image1.png image2.png image3.png
+
+
+
+## Как это работает
+
+Скрипт берёт высоту картинки как размер квадрата и нарезает по горизонтали.
+Если ширина не делится ровно (например 530x100) — последний тайл дополняется прозрачным фоном до квадрата.
+Результат сохраняется в папку `tiles/` в формате PNG с прозрачностью.
+
+
+## Пример вывода
+
+image.png
+tile_1: 100x100
+tile_2: 100x100
+tile_3: 100x100
+tile_4: 100x100
+tile_5: 30x100
+Done
+
+
+
+
+
+
