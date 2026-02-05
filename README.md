@@ -55,7 +55,7 @@ Done
 
 
 
-
+English
 # Image Tile Splitter
 
 A script for splitting images into square tiles horizontally.
